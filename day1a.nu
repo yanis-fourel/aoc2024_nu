@@ -5,5 +5,6 @@ def main [] {
 
 	$l
 	| zip $r 
-	| reduce --fold 0 { |it, acc| $acc + (($it.0 | into int) - ($it.1 | into int) | math abs)}
+	| each {|elt| ($elt.0 | into int) - ($elt.1 | into int) | math abs}
+	| math sum
 }

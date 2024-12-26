@@ -4,7 +4,7 @@ def count [val: any]: list<any> -> int {
 }
 
 def main [] {
-	let tab = open inputs/d1a | lines | split column -c ' '
+	let tab = open inputs/day1.txt | lines | split column -c ' '
 	let l = $tab | get column1 | each { into int }
 	let r = $tab | get column2 | each { into int }
 

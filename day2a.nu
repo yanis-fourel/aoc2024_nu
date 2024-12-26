@@ -5,7 +5,7 @@ export def all-same-sign [] list<int> -> bool {
 	($min < 0 and $max < 0) or ($min > 0 and $max > 0) or ($min == 0 and $max == 0)
 }
 
-def is-report-valid [] list<int> -> bool {
+export def is-report-valid [] list<int> -> bool {
 	$in
 	| window 2
 	| each {|elt|

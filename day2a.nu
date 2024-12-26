@@ -2,7 +2,7 @@ export def all-same-sign [] list<int> -> bool {
 	let min = $in | math min
 	let max = $in | math max
 
-	($min < 0 and $max < 0) or ($min > 0 and $max > 0) or ($min == 0 and $max == 0)
+	($min < 0 and $max < 0) or ($min > 0 and $max > 0)
 }
 
 export def is-report-valid [] list<int> -> bool {
